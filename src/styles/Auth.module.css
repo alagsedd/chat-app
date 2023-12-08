@@ -38,19 +38,31 @@
 .input {
     width: 15rem;
     border-radius: 5px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     border: 1px solid #0d2136;
     background-color:  #021524;
     outline: none;
     padding: 0.4rem 0.5rem;
 }
+.input:focus {
+    outline: 0;
+    box-shadow: 0 0 5px deeppink;
+}
 .alt {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     padding: 0.5rem;
     /* border: 1px solid gray; */
+    height: 6rem;
 }
 .or {
     margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 360px) {
+    .parent {
+        width: 20rem;
+    }
 }

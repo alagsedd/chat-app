@@ -1,0 +1,73 @@
+.parent {
+    border: 1px solid #162d47;
+    height: 38rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.messages {
+    height: 87%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    
+}
+.form {
+    height: 10%;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.input {
+    padding: 0.2rem 0.6rem;
+    width: 12rem;
+    border: 1px solid #0d2136;
+    background-color:  #021524;
+}
+.input::placeholder {
+    color: #fff;
+}
+.input:focus {
+    outline: 0;
+    border: 1px solid deeppink;
+    box-shadow: 0 0 5px deeppink;
+}
+.textBody {
+    width: 78%;
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    padding: 0.4rem 0.5rem;
+    border: 1px solid deeppink;
+}
+.top {
+    /* border: 1px solid deeppink; */
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-between;
+    width: 17rem;
+}
+.top span {
+    /* border: 1px solid #fff; */
+    text-align: center;
+}
+.profilePic {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    filter: contrast(110%);
+    border-radius: 50%;
+}
+.note {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #0d2136;
+}
+
+@media screen and (min-width: 350px) {
+    .parent {
+        width: 20rem;
+    }
+}

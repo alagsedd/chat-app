@@ -1,18 +1,16 @@
-import { useState } from "react";
 import styles from "../styles/LandingPage.module.css";
-import Room from "../components/Room";
 import Auth from "../components/Auth";
 import Chat from "../components/Chat";
+import { auth } from "../services/FireBase";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const LandingPage = () => {
-  const [isAuth, setIsAuth] = useState("");
-  const [room, setRoom] = useState("");
+  const [user] = useAuthState(auth);
+  console.log(user, "user");
 
   return (
     <>
-      <div className={styles.parent}>
-        {isAuth ? <div>{room ? <Chat /> : <Room />}</div> : <Auth />}
-      </div>
+      <div className={styles.parent}> {user ? <Chat /> : <Auth />}</div>
     </>
   );
 };
